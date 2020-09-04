@@ -18,5 +18,6 @@
       <option name="myCustomValuesEnabled" value="true" />
     </inspection_tool>
     <inspection_tool class="MavenModelInspection" enabled="true" level="TYPO" enabled_by_default="true" />
+    <inspection_tool class="SpringJavaInjectionPointsAutowiringInspection" enabled="true" level="TYPO" enabled_by_default="true" />
   </profile>
 </component>

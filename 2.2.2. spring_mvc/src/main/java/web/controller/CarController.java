@@ -1,21 +1,23 @@
 package web.controller;
 
 
-import web.model.Car;
+import org.jetbrains.annotations.NotNull;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import web.service.ServiceCarImp;
 
-import java.util.List;
-
 @Controller
 public class CarController {
+    ServiceCarImp serviceCarImp = new ServiceCarImp();
 
     @GetMapping(value = "/cars")
     public String printCar(ModelMap model) {
-        ServiceCarImp serviceCarImp = new ServiceCarImp();
-        model.addAttribute("message",  serviceCarImp.getCar().get(0).getName());
+        model.addAttribute("message", serviceCarImp.getCar().get(0).getName());
         model.addAttribute("message1", serviceCarImp.getCar().get(0).getSeries());
         model.addAttribute("message2", serviceCarImp.getCar().get(0).getNumder());
         model.addAttribute("message3", serviceCarImp.getCar().get(1).getName());

@@ -1,5 +1,6 @@
 package web.service;
 
+import org.springframework.stereotype.Component;
 import web.model.Car;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,6 @@ public class ServiceCarImp implements ServiseCar{
     private Car car;
 
     @Override
-    @Bean
     public List<Car> getCar() {
         List<Car> car = new ArrayList<>();
         car.add(new Car("GAZ ","21 ","A117MK"));

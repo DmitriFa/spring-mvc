@@ -6,9 +6,9 @@
     <title>Title</title>
 </head>
 <body>
-<!--<p><a href="?locale=en">English</a>|<a href="?locale=ru">Russian</a> </p>>-->
+<!--<p><a href="?locale=en">English</a>|<a href="?locale=ru">Russian</a> </p>-->
 <!--<h1 th:text="${tablename}">CARS</h1>-->
-<a href="?locale=${locale}"></a>
+<!--<p></p><a href="/cars?locale="th:text ="${locale}">Redirect</a><p></p>-->
 <h1 th:text="#{lable.tablename}"></h1>
 
 <table border="4" width="75%">
@@ -20,11 +20,11 @@
     <tr>
         <td>
             <th:block th:each="msg : ${message}">
-                <h3 th:text="${msg}"></h3>
-            </th:block>
+            <h3 th:text="${msg}"></h3>
+        </th:block>
         </td>
         <td>
-            <th:block th:each="msg : ${message1}">
+        <th:block th:each="msg : ${message1}">
                 <h3 th:text="${msg}"></h3>
             </th:block>
         </td>

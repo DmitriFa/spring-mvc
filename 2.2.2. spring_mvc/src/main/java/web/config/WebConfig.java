@@ -30,7 +30,7 @@ public class WebConfig implements WebMvcConfigurer {
     public WebConfig(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
     }
-    @Bean
+    @Bean("localeResolver")
     public CookieLocaleResolver localeResolver(){
         CookieLocaleResolver localeResolver = new CookieLocaleResolver();
         localeResolver.setDefaultLocale(Locale.ENGLISH);

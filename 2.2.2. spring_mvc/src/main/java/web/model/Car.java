@@ -20,12 +20,10 @@ public class Car
     public String getName() {
         return name;
     }
-
-    public String getNumder() {
-        return numder;
-    }
-
     public String getSeries() {
         return series;
+    }
+    public String getNumber() {
+        return numder;
     }
 }
